@@ -1,0 +1,27 @@
+<html>
+<script>
+	function theButton(num1,num2){
+		newmsg.value="";
+		let message=msg.value
+		let i=0
+		let val1=num1;
+		let val2=num2;
+		while (i<message.length){
+			if(message.charCodeAt(i)>=val1 && message.charCodeAt(i)<=val2){
+				newmsg.value+=message.substring(i,i+1)
+			}
+			i++
+		}
+	}
+</script>
+Enter Message:<input type="text" name="msg1" id="msg"> <br>
+<input type="Button" name="btn1" id="A" value="Copy UpperCase Letters" onClick="theButton(65,90)">
+<input type="Button" name="btn2" id="B" value="Copy LowerCase Letters" onClick="theButton(97,122)">
+<input type="Button" name="btn3" id="C" value="Copy Digits" onClick="theButton(48,57)">
+<br>
+New Message:<input type="text" name="msg2" id="newmsg"><br>
+
+<Span id="T">
+	Hello Mimi
+</Span>
+</html>
